@@ -25,7 +25,7 @@ const counting = setInterval(
             clearInterval(counting);
             timer.style.display = 'none';
             const divAttesa = document.getElementById("timer2")
-            let attesa = 2;
+            let attesa = 30;
             const counting2 = setInterval(
             function () {
                 divAttesa.innerHTML = attesa;
@@ -34,13 +34,13 @@ const counting = setInterval(
                     clearInterval(counting2);
 
                     for (let i = 0; i < 5; i++) {
-                        numeroG = prompt("inserisci uno dei numeri visti precedentemente");
+                        numeroG = parseInt(prompt("inserisci uno dei numeri visti precedentemente"));
                         let presenza = arrRandom.includes(numeroG);
                         console.log(presenza);
-                        if (presenza = true) {
+                        if (presenza == true) {
                             console.log("Bravo " + numeroG + " è uno dei numeri visti precedentemente");
                             
-                        } else if (presenza = false) {
+                        } else {
                             console.log("hai sbagliato " + numeroG + " non è uno dei numeri visti");
                         }
                     }
